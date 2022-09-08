@@ -1,0 +1,37 @@
+server:
+  port: 9999
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
+logging:
+  file:
+    name: nse-report-system.log
+  logback:
+    rollingpolicy:
+      clean-history-on-start: 'true'
+      total-size-cap: 10MB
+      file-name-pattern: nse-report-system-%d{yyyy-MM-dd}.%i.log
+      max-history: '30'
+      max-file-size: 1MB
+  level:
+    root: info
+
+vpcons:
+  system:
+    shutdowm: true
+    start: true
+  nse:
+    member-code: 12345
+    login-id: 12345
+    password: 12345
+    secret: 12345
+    api:
+      token: https://api.nseindia.com/inspectionapi/login
+      logout: https://api.nseindia.com/inspectionapi/logout
+      bank-balance: https://api.nseindia.com/inspectionapi/tradingEodBalanceUpload/1.0
+      trading-upload: https://api.nseindia.com/inspectionapi/tradingCashAndCashEquivalentUpload/1.0
+      success: success,200
+      referer: https://api.nseindia.com/
+      user-agent: PostmanRuntime/7.29.2
