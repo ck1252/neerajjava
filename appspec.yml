@@ -6,11 +6,11 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: scripts/tomcatstop.sh.sh
+    - location: scripts/tomcatstop.sh
   AfterInstall:
     - location: scripts/removeoldAPP.sh
       timeout: 180
   ApplicationStart:
-    - location: scripts/starttomcat.sh.sh
+    - location: scripts/starttomcat.sh
       timeout: 3600
 
