@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: target/nse-report-system-0.0.1-SNAPSHOT.jar
+    destination: /usr/local/springboot
+
+hooks:
+  BeforeInstall:
+    - location: scripts/removeoldAPP.sh
+
+  AfterInstall:
+    - location: scripts/starttomcat.sh
+      timeout: 180
+
