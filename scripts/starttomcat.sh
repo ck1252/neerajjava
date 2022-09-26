@@ -1,1 +1,1 @@
-nohup java -jar /usr/local/springboot/nse-report-system-0.0.1-SNAPSHOT.jar &
+java -jar /usr/local/springboot/nse-report-system-0.0.1-SNAPSHOT.jar &
